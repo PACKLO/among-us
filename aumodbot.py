@@ -2,8 +2,6 @@ import discord
 from discord.ext import commands
 import os
 
-TOKEN = os.evriron.get('BOT_TOKEN')
-
 bot = commands.Bot(command_prefix='/')
 #ИВЕНТ ЗАПУСКА БОТА
 @bot.event
@@ -36,4 +34,6 @@ async def kick(ctx, member : discord.Member, *, reason=None):
 async def ban(ctx, member : discord.Member, *, reason=None):
 	await member.ban(reason=reason)
 
-bot.run(TOKEN)
+token = os.environ.get('BOT_TOKEN')
+
+bot.run(str(token))
