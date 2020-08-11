@@ -12,7 +12,7 @@ async def on_ready():
 	print("Бот запущен")
 	await bot.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('Among Us'))
 
-TimeNeed = "12:44"
+TimeNeed = "13:20"
 
 @bot.event
 async def on_ready():
