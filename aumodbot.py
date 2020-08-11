@@ -23,7 +23,7 @@ async def ping(ctx):
 @bot.command()
 @commands.has_role('Администратор')
 async def clear(ctx, amount=5):
-	await ctx.channel.purge(limit=amount)
+	await ctx.channel.purge(limit=amount + 1)
 #КОМАНДА КИКА
 @bot.command()
 @commands.has_role('Администратор')
