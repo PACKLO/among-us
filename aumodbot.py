@@ -1,9 +1,6 @@
 import discord
 from discord.ext import commands
 import os
-from discord.ext import commands
-import asyncio
-import datetime
 
 bot = commands.Bot(command_prefix='/')
 #ИВЕНТ ЗАПУСКА БОТА
@@ -11,16 +8,6 @@ bot = commands.Bot(command_prefix='/')
 async def on_ready():
 	print("Бот запущен")
 	await bot.change_presence(status=discord.Status.do_not_disturb, activity=discord.Game('Among Us'))
-
-TimeNeed = "13:20"
-
-@bot.event
-async def on_ready():
-    while True:
-        if datetime.datetime.now().strftime("%H:%M") == TimeNeed:
-            await bot.get_channel(742464038591660053).send("я даун и я работаю")
-
-        await asyncio.sleep(60)
 
 #КОМАНДА ПОВТОРА
 @bot.command(pass_context=True)
